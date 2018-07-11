@@ -1,9 +1,9 @@
 # AWS Lambda function to update Route 53 DNS entries when auto scaling group events occur
 AWS Lambda function written in Python 2.7 which triggers Route 53 DNS updates when auto scaling event occurs.
 
-Alteon can then use DNS queries to autodiscover instance changes in the auto scaling group
+Alteon can then use DNS queries to autodiscover instance changes in the auto scaling group.
 
-For a detailed explanation on how to deploy and use this Lambda script refer to the following [Video](https://www.youtube.com/watch?v=adV8-_hgL4g)
+For a detailed explanation on how to deploy and use this Lambda script refer to the following [Video](https://www.youtube.com/watch?v=adV8-_hgL4g).
 
 ## Lambda Function Flow Description
 * This Lambda function gets triggered by CloudWatch for every instance event in auto scaling group (Instance Launch / Instance Terminate).
