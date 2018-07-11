@@ -18,7 +18,7 @@ Alteon can then use DNS queries to autodiscover instance changes in the auto sca
 For a detailed explanation on how to deploy and use this Lambda script refer to the following [Video](https://www.youtube.com/watch?v=adV8-_hgL4g)
 
 ## Files
-`aws_lambda_autoscale_ddns.py` - the actual Lambda function (written in Python 2.7)
-`cloudwatch_event.json` - JSON file that includes all the CloudWatch events that should trigger this Lambda function
-`execution_role.json` - JSON file that includes all the permissions required for the Lambda function to work properly
+* `aws_lambda_autoscale_ddns.py` - the actual Lambda function (written in Python 2.7)
+* `cloudwatch_event.json` - JSON file that includes all the CloudWatch events that should trigger this Lambda function
+* `execution_role.json` - JSON file that includes all the permissions required for the Lambda function to work properly
 
