@@ -1,7 +1,10 @@
-# aws_lambda_autoscale_ddns
+# AWS Lambda function to update Route 53 DNS entries when auto scaling group events occur
 AWS Lambda function written in Python 2.7 which triggers Route 53 DNS updates when auto scaling event occurs.
 
 Alteon can then use DNS queries to autodiscover instance changes in the auto scaling group
+
+For a detailed explanation on how to deploy and use this Lambda script refer to the following [Video](https://www.youtube.com/watch?v=adV8-_hgL4g)
+
 ## Lambda Function Flow Description
 * This Lambda function gets triggered by CloudWatch for every instance event in auto scaling group (Instance Launch/Instance Terminate)
 * It first checks if the `alteon.internal.` Hosted Zone exists for same VPC from which the autosclaing group event was triggered. If the Hosted Zone exists it obtains its ID. If not, it creates it and obtains its ID.
@@ -13,9 +16,6 @@ Alteon can then use DNS queries to autodiscover instance changes in the auto sca
 
 ## Lambda Function Flow Diagram
 ![alt text](https://raw.githubusercontent.com/Radware/aws_lambda_autoscale_ddns/master/aws_autoscale_flow.png "Flow diagram")
-
-## Usage
-For a detailed explanation on how to deploy and use this Lambda script refer to the following [Video](https://www.youtube.com/watch?v=adV8-_hgL4g)
 
 ## Files
 * `aws_lambda_autoscale_ddns.py` - the actual Lambda function (written in Python 2.7)
