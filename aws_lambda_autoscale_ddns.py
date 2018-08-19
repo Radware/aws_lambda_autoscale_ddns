@@ -105,7 +105,7 @@ def update_hosted_zone_records(hosted_zone_id, record_set_name, ttl, servers):
                 'Name': record_set_name,
                 'Type': 'A',
                 'TTL': ttl,
-                'ResourceRecords': servers
+                'ResourceRecords': sotred(servers)[:29]
             }
         }]
     })
